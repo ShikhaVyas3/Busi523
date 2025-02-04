@@ -1,8 +1,131 @@
-//
-//  StemOptions.json
-//  busi523
-//
-//  Created by Shikha Vyas on 2/4/25.
-//
-
-import Foundation
+{
+  "stemFields": [
+    {
+      "name": "Computer Science",
+      "percentMale": 75,
+      "percentFemale": 25
+    },
+    {
+      "name": "Mechanical Engineering",
+      "percentMale": 85,
+      "percentFemale": 15
+    },
+    {
+      "name": "Electrical Engineering",
+      "percentMale": 80,
+      "percentFemale": 20
+    },
+    {
+      "name": "Civil Engineering",
+      "percentMale": 70,
+      "percentFemale": 30
+    },
+    {
+      "name": "Chemical Engineering",
+      "percentMale": 75,
+      "percentFemale": 25
+    },
+    {
+      "name": "Biology",
+      "percentMale": 40,
+      "percentFemale": 60
+    },
+    {
+      "name": "Chemistry",
+      "percentMale": 45,
+      "percentFemale": 55
+    },
+    {
+      "name": "Physics",
+      "percentMale": 65,
+      "percentFemale": 35
+    },
+    {
+      "name": "Mathematics",
+      "percentMale": 60,
+      "percentFemale": 40
+    },
+    {
+      "name": "Environmental Science",
+      "percentMale": 45,
+      "percentFemale": 55
+    },
+    {
+      "name": "Biomedical Engineering",
+      "percentMale": 55,
+      "percentFemale": 45
+    },
+    {
+      "name": "Computer Engineering",
+      "percentMale": 78,
+      "percentFemale": 22
+    },
+    {
+      "name": "Data Science",
+      "percentMale": 70,
+      "percentFemale": 30
+    },
+    {
+      "name": "Statistics",
+      "percentMale": 60,
+      "percentFemale": 40
+    },
+    {
+      "name": "Robotics",
+      "percentMale": 80,
+      "percentFemale": 20
+    },
+    {
+      "name": "Astronomy",
+      "percentMale": 70,
+      "percentFemale": 30
+    },
+    {
+      "name": "Geology",
+      "percentMale": 55,
+      "percentFemale": 45
+    },
+    {
+      "name": "Materials Science",
+      "percentMale": 65,
+      "percentFemale": 35
+    },
+    {
+      "name": "Architecture",
+      "percentMale": 55,
+      "percentFemale": 45
+    },
+    {
+      "name": "Software Engineering",
+      "percentMale": 78,
+      "percentFemale": 22
+    }
+  ],
+  "healthcare": [
+    {
+      "name": "Nursing",
+      "percentMale": 15,
+      "percentFemale": 85
+    },
+    {
+      "name": "Medicine",
+      "percentMale": 60,
+      "percentFemale": 40
+    },
+    {
+      "name": "Dentistry",
+      "percentMale": 65,
+      "percentFemale": 35
+    },
+    {
+      "name": "Pharmacy",
+      "percentMale": 40,
+      "percentFemale": 60
+    },
+    {
+      "name": "Physical Therapy",
+      "percentMale": 30,
+      "percentFemale": 70
+    }
+  ]
+}
