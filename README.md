@@ -1,0 +1,1 @@
+I created this app as an interactive game for  my business class: diversity, equity, and inclusion in the workplace (busi 523). it allows the user to pick which careers is stereotypically male and female, and shows their results at the end. It also gives an option to show the actual statistics of male vs female dominated STEM fields. 
