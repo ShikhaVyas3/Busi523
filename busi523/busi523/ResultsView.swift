@@ -65,15 +65,19 @@ struct ResultsView: View {
                         .padding()
                         
                         VStack(spacing: 16) {
-                            Button("Restart Game") {
+                            
+                            NavigationLink(destination: ContentView().environmentObject(gameManager)) {
+                                Text("Restart Game")
+                                    .padding()
+                                    .background(Color.green)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
+                            .simultaneousGesture(TapGesture().onEnded {
                                 gameManager.currentIndex = 0
                                 gameManager.selectedFields.removeAll()
                                 gameManager.showResults = false
-                            }
-                            .padding()
-                            .background(Color.green)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                            })
                             
                             NavigationLink(destination: ActualView()) {
                                 HStack {

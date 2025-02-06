@@ -11,4 +11,8 @@ class GameManager: ObservableObject {
     @Published var currentIndex = 0
     @Published var selectedFields: [(field: StemField, gender: String)] = []
     @Published var showResults = false
+    @Published var userQuestionCount: Int = 10
+    @Published var fields: [StemField] = []
+       
+       
 }

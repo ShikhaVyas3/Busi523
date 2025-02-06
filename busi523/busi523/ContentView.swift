@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var gameManager = GameManager()
+    @EnvironmentObject var gameManager: GameManager
     
     var body: some View {
         NavigationView {
@@ -20,9 +20,11 @@ struct ContentView: View {
                         .foregroundStyle(Color.white)
                         .bold()
                         .fontDesign(.serif)
-                    Text("What fields do you think are stereotypicaly male or female?").foregroundStyle(.white).fontDesign(.monospaced)
+                    Text("What fields do you think are stereotypically male or female?")
+                        .foregroundStyle(.white)
+                        .fontDesign(.monospaced)
                     
-                    Spacer(minLength: 20)
+                    Spacer(minLength: 80)
                     
                     NavigationLink(destination: GameView().environmentObject(gameManager)) {
                         VStack {
@@ -40,11 +42,26 @@ struct ContentView: View {
                         .cornerRadius(15)
                     }
                     
+                    VStack(alignment: .center, spacing: 20) {
+                        Spacer()
+                        Text("Select the number of questions:")
+                            .font(.headline)
+                            .foregroundColor(.white).bold().fontDesign(.monospaced)
+                        
+                        // Use a Stepper for numeric input.
+                        Stepper(value: $gameManager.userQuestionCount,
+                                in: 1...(gameManager.fields.isEmpty ? 10 : gameManager.fields.count)) {
+                            Text("\(gameManager.userQuestionCount) Questions")
+                                .font(.title2).foregroundStyle(.white).fontDesign(.monospaced)
+                        }
+                    }.padding(.horizontal, 19)
+                    
                     Spacer()
                     Spacer()
                 }
                 .padding(.vertical, 50)
-            }.navigationBarBackButtonHidden()
+            }
+            .navigationBarBackButtonHidden()
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarBackButtonHidden()
@@ -52,6 +69,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView().environmentObject(GameManager())
 }
+
 

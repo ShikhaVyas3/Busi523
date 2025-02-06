@@ -15,18 +15,19 @@ struct StemField: Codable {
 
 struct GameView: View {
     @EnvironmentObject var gameManager: GameManager
-    @State private var fields: [StemField] = []
-    
-    private var maxQuestions: Int {
-        min(20, fields.count)
-    }
+
+       
+       // The maximum number of questions is the lesser of the user choice and available fields.
+       private var maxQuestions: Int {
+           min(gameManager.userQuestionCount, gameManager.fields.count)
+       }
     
     var body: some View {
         VStack {
-            if fields.isEmpty {
+            if gameManager.fields.isEmpty {
                 Text("Loading data...")
             } else if gameManager.currentIndex < maxQuestions && !gameManager.showResults {
-                QuestionView(fields: fields, maxQuestions: maxQuestions)
+                QuestionView(fields: gameManager.fields, maxQuestions: maxQuestions)
             } else {
                 ResultsView()
             }
@@ -56,7 +57,7 @@ struct GameView: View {
             }
             
             print("Successfully loaded \(stemFields.count) STEM fields")
-            fields = stemFields
+            gameManager.fields = stemFields
         } catch {
             print("Error loading or decoding JSON: \(error)")
             if let decodingError = error as? DecodingError {

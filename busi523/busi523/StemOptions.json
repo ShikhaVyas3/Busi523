@@ -10,6 +10,31 @@
       "percentMale": 85,
       "percentFemale": 15
     },
+      {
+        "name": "Nursing",
+        "percentMale": 15,
+        "percentFemale": 85
+      },
+      {
+        "name": "Medicine",
+        "percentMale": 60,
+        "percentFemale": 40
+      },
+      {
+        "name": "Dentistry",
+        "percentMale": 65,
+        "percentFemale": 35
+      },
+      {
+        "name": "Pharmacy",
+        "percentMale": 40,
+        "percentFemale": 60
+      },
+      {
+        "name": "Physical Therapy",
+        "percentMale": 30,
+        "percentFemale": 70
+      },
     {
       "name": "Electrical Engineering",
       "percentMale": 80,
@@ -99,33 +124,6 @@
       "name": "Software Engineering",
       "percentMale": 78,
       "percentFemale": 22
-    }
-  ],
-  "healthcare": [
-    {
-      "name": "Nursing",
-      "percentMale": 15,
-      "percentFemale": 85
-    },
-    {
-      "name": "Medicine",
-      "percentMale": 60,
-      "percentFemale": 40
-    },
-    {
-      "name": "Dentistry",
-      "percentMale": 65,
-      "percentFemale": 35
-    },
-    {
-      "name": "Pharmacy",
-      "percentMale": 40,
-      "percentFemale": 60
-    },
-    {
-      "name": "Physical Therapy",
-      "percentMale": 30,
-      "percentFemale": 70
     }
   ]
 }
