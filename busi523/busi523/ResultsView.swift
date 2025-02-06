@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ResultsView: View {
     @EnvironmentObject var gameManager: GameManager
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -66,18 +67,17 @@ struct ResultsView: View {
                         
                         VStack(spacing: 16) {
                             
-                            NavigationLink(destination: ContentView().environmentObject(gameManager)) {
-                                Text("Restart Game")
-                                    .padding()
-                                    .background(Color.green)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(10)
-                            }
-                            .simultaneousGesture(TapGesture().onEnded {
-                                gameManager.currentIndex = 0
-                                gameManager.selectedFields.removeAll()
-                                gameManager.showResults = false
-                            })
+                            Button("Restart Game") {
+                                            gameManager.currentIndex = 0
+                                            gameManager.selectedFields.removeAll()
+                                            gameManager.showResults = false
+                                            presentationMode.wrappedValue.dismiss()
+                                        }
+                                        .padding()
+                                        .background(Color.green)
+                                        .foregroundColor(.white)
+                                        .cornerRadius(10)
+                                    
                             
                             NavigationLink(destination: ActualView()) {
                                 HStack {

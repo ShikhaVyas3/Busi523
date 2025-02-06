@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var gameManager: GameManager
+    @StateObject private var gameManager = GameManager()
     
     var body: some View {
         NavigationView {
